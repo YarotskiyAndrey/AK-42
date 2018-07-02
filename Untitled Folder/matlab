@@ -1,4 +1,4 @@
-﻿arr=[];
+arr=[];
 
 eps=0.01;
 a=0.5;
@@ -27,13 +27,11 @@ do
 until (abs(a-b)<eps)
 
 
-arr
+arr=sort(arr);
 %fun=(x-1)^4;
 fun=cos(arr/2)+cos(5*arr)/5;
 plot(arr,fun)
 fun
-
-disp
 
 disp("kek")
 %x=[1,2,3];
