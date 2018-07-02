@@ -41,6 +41,9 @@ int main() {
 		delta = abs(a-b);
 		
 	} while(delta>eps);
+	cout<<"Точка минимума: "<<x<<endl;
+	cout<<"Значение функции: "<<function(x)<<endl;
+	cout<<"Количество итераций: "<<k<<endl;
 	
 	return 0;
 }
