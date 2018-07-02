@@ -9,7 +9,7 @@ double function(double x)
 
 int main() {
 	double a,b;
-	double eps=0.0001;
+	double eps=0.01;
 	a=0.5;
 	b=2;
 	int k=0;
@@ -17,5 +17,30 @@ int main() {
 	double y;
 	double z ;
 	double delta;
+	do
+	{
+		
+		y=a+(b-a)/4;
+		z=b-(b-a)/4;
+		if (function(y)<function(x))
+		{
+			b=x;
+			x=y;
+		}
+		else if(function(z)<function(x))
+		{
+			a=x;
+			x=z;
+		}
+		else
+		{
+			a=y;
+			b=z;
+		}
+		k++;
+		delta = abs(a-b);
+		
+	} while(delta>eps);
+	
 	return 0;
 }
