@@ -1,0 +1,42 @@
+﻿arr=[];
+
+eps=0.01;
+a=0.5;
+b=2;
+x=(a+b)/2;
+
+arr=[arr x];
+function f = f(x)
+  f = cos(x/2)+cos(5*x)/5;
+endfunction
+
+do
+  y=a+(b-a)/4;
+  z=b-(b-a)/4;
+  if (f(y)<f(x))      
+      b=x;
+      x=y;
+  elseif (f(z)<f(x))
+      a=x;
+      x=z;
+  else
+      a=y;
+      b=z;
+  endif
+  arr=[arr x];
+until (abs(a-b)<eps)
+
+
+arr
+%fun=(x-1)^4;
+fun=cos(arr/2)+cos(5*arr)/5;
+plot(arr,fun)
+fun
+
+disp
+
+disp("kek")
+%x=[1,2,3];
+%x=[x 10];
+%y=cos(x/2)+cos(5*x)/5; %Формирование массива y.
+%plot(x,y)
